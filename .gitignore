@@ -1,0 +1,12 @@
+node_modules/
+build/
+dist/
+storage/
+android/jdk17/
+android/.gradle/
+android/build/
+android/app/build/
+*.jks
+*.keystore
+*.log
+.env*
