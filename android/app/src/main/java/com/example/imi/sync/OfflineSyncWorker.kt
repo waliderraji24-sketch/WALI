@@ -2,20 +2,19 @@ package com.example.imi.sync
 
 import android.content.Context
 import androidx.work.CoroutineWorker
-import androidx.work.ListenableWorker.Result
 import androidx.work.WorkerParameters
 import com.example.imi.data.local.AppDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 class OfflineSyncWorker(
-    private val appContext: Context,
+    appContext: Context,
     workerParams: WorkerParameters
 ) : CoroutineWorker(appContext, workerParams) {
 
-    override suspend fun doWork(): Result = withContext(Dispatchers.IO) {
+    override suspend fun doWork(): androidx.work.ListenableWorker.Result = withContext(Dispatchers.IO) {
         try {
-            val db = AppDatabase.getDatabase(appContext)
+            val db = AppDatabase.getDatabase(applicationContext)
             val pendingDao = db.pendingMessageDao()
             val pendingUploadDao = db.pendingUploadDao()
 
@@ -28,10 +27,10 @@ class OfflineSyncWorker(
                 android.util.Log.d("OfflineSyncWorker", "Found ${pendingMessages.size} pending messages and ${pendingUploads.size} pending uploads.")
             }
 
-            Result.success()
+            androidx.work.ListenableWorker.Result.success()
         } catch (e: Exception) {
             e.printStackTrace()
-            Result.retry()
+            androidx.work.ListenableWorker.Result.retry()
         }
     }
 }
