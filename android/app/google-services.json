@@ -1,0 +1,34 @@
+{
+  "project_info": {
+    "project_number": "684089806632",
+    "project_id": "cosmic-altar-m6shk",
+    "storage_bucket": "cosmic-altar-m6shk.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684089806632:android:49b180b089d6f8c2820a1d",
+        "android_client_info": {
+          "package_name": "com.example.imi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "684089806632-h89ggq3vm70o3g1h2n50rjskldo002av.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTCqP3hzbJk-0ezAt2kalKwo7_l8pzk3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

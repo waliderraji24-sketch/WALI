@@ -1,0 +1,12 @@
+<resources>
+    <color name="primary">#2AABEE</color>
+    <color name="primary_dark">#229ED9</color>
+    <color name="accent">#00C853</color>
+    <color name="call_bg">#0F172A</color>
+    <color name="call_accept">#22C55E</color>
+    <color name="call_decline">#EF4444</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="slate_900">#0F172A</color>
+    <color name="slate_700">#334155</color>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">IMI</string>
+    <string name="channel_messages_name">رسائل IMI</string>
+    <string name="channel_messages_desc">إشعارات الرسائل والدردشات الفورية</string>
+    <string name="channel_calls_name">مكالمات IMI</string>
+    <string name="channel_calls_desc">إشعارات المكالمات الصوتية والمرئية الواردة</string>
+    <string name="incoming_voice_call">مكالمة صوتية واردة...</string>
+    <string name="incoming_video_call">مكالمة فيديو واردة...</string>
+    <string name="accept_call">قبول</string>
+    <string name="decline_call">رفض</string>
+</resources>
