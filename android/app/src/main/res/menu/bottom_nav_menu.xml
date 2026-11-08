@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_chats"
-        android:icon="@android:drawable/ic_menu_message"
+        android:icon="@android:drawable/ic_dialog_email"
         android:title="Chats" />
     <item
         android:id="@+id/nav_reels"
