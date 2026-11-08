@@ -10,3 +10,5 @@ android/app/build/
 *.keystore
 *.log
 .env*
+local.properties
+android/local.properties
