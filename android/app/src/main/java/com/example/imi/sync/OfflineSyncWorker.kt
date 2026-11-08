@@ -28,7 +28,7 @@ class OfflineSyncWorker(
             Result.success()
         } catch (e: Exception) {
             e.printStackTrace()
-            Result.retry()
+            Result.failure()
         }
     }
 }
