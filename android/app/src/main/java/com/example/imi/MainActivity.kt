@@ -1,8 +1,14 @@
 package com.example.imi
 
+import android.Manifest
+import android.content.Context
+import android.content.pm.PackageManager
+import android.media.AudioManager
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.imi.chat.ChatsFragment
 import com.example.imi.contacts.ContactsFragment
@@ -70,6 +76,29 @@ class MainActivity : AppCompatActivity() {
     private fun updateUserOnlineStatus(online: Boolean) {
         val uid = auth.currentUser?.uid ?: return
         firestore.collection("users").document(uid).update(mapOf("online" to online, "lastSeen" to System.currentTimeMillis()))
+    }
+
+    fun checkAndRequestContactsPermission() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_CONTACTS), 101)
+        }
+    }
+
+    fun startCallAudioRouting(callType: String, isSpeaker: Boolean) {
+        val audioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
+        audioManager.mode = AudioManager.MODE_IN_COMMUNICATION
+        audioManager.isSpeakerphoneOn = isSpeaker
+    }
+
+    fun setSpeakerphoneOn(isSpeaker: Boolean) {
+        val audioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
+        audioManager.isSpeakerphoneOn = isSpeaker
+    }
+
+    fun stopCallAudioRouting() {
+        val audioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
+        audioManager.mode = AudioManager.MODE_NORMAL
+        audioManager.isSpeakerphoneOn = false
     }
 
     override fun onResume() { super.onResume(); updateUserOnlineStatus(true) }

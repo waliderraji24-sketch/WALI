@@ -19,46 +19,53 @@
             android:textStyle="bold"
             android:textColor="@color/black" />
 
-        <EditText
-            android:id="@+id/etRegUsername"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRegisterDisplayName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="24dp"
+            android:hint="Full Name"
+            android:inputType="textPersonName" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRegisterUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:hint="Username"
             android:inputType="text" />
 
-        <EditText
-            android:id="@+id/etRegEmail"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRegisterPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="Email (Optional)"
-            android:inputType="textEmailAddress" />
+            android:layout_marginTop="12dp"
+            android:hint="Phone Number"
+            android:inputType="phone" />
 
-        <EditText
-            android:id="@+id/etRegPassword"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRegisterPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:hint="Password"
             android:inputType="textPassword" />
 
-        <Button
-            android:id="@+id/btnRegister"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegisterSubmit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="24dp"
             android:text="Register"
             android:backgroundTint="@color/primary" />
 
-        <TextView
-            android:id="@+id/tvGoToLogin"
+        <ProgressBar
+            android:id="@+id/pbRegisterLoading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
-            android:text="Already have an account? Login"
-            android:textColor="@color/primary" />
+            android:visibility="gone" />
 
     </LinearLayout>
 </ScrollView>

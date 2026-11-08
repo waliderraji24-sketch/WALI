@@ -14,7 +14,7 @@
         android:padding="12dp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvContacts"
+        android:id="@+id/rvContactsList"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
