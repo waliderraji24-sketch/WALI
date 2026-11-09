@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ais-dev-e52mstu736n3fzhf67gwqu-385033582149.europe-west1.run.app/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ais-dev-e52mstu736n3fzhf67gwqu-385033582149.europe-west1.run.app/#/reels</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ais-dev-e52mstu736n3fzhf67gwqu-385033582149.europe-west1.run.app/#/live</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>

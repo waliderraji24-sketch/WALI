@@ -1,0 +1,7 @@
+# robots.txt for imi Studio PWA
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /tests/
+
+Sitemap: https://ais-dev-e52mstu736n3fzhf67gwqu-385033582149.europe-west1.run.app/sitemap.xml
