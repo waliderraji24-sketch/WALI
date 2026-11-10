@@ -40,16 +40,16 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         private const val TAG = "ImiMainActivity"
-        // Primary live URL for the full IMI social platform
-        const val PRIMARY_APP_URL = "https://ais-dev-e52mstu736n3fzhf67gwqu-385033582149.europe-west1.run.app"
+        // Primary live URL for the full IMI social platform (Public Domain without Cookie check)
+        const val PRIMARY_APP_URL = "https://imi-studio.ai.studio/?source=android_native"
         const val PREVIEW_APP_URL = "https://ais-pre-e52mstu736n3fzhf67gwqu-385033582149.europe-west1.run.app"
-        const val OFFLINE_FALLBACK_URL = "https://appassets.androidplatform.net/assets/www/index.html"
+        const val OFFLINE_FALLBACK_URL = "https://appassets.androidplatform.net/assets/www/index.html?source=android_native"
 
         val ALLOWED_HOSTS = listOf(
+            "imi-studio.ai.studio",
+            "appassets.androidplatform.net",
             "ais-dev-e52mstu736n3fzhf67gwqu-385033582149.europe-west1.run.app",
             "ais-pre-e52mstu736n3fzhf67gwqu-385033582149.europe-west1.run.app",
-            "appassets.androidplatform.net",
-            "imi-studio.ai.studio",
             "localhost"
         )
     }
